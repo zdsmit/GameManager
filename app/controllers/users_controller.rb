@@ -6,8 +6,16 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(user_params)
-    user[:session_id] = @user.id
-    redirect_to games_path
+    session[:user_id] = @user.id
+    redirect_to users_path(current_user)
+  end
+
+  def index
+    @users = User.all
+  end
+
+  def show
+    @user = User.find(params[:id])
   end
 
   private

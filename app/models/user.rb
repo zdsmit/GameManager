@@ -1,7 +1,7 @@
 class User < ApplicationRecord
-  has_many :user_games
-  has_many :games, through: :user_games
-  has_many :genres, through: :games
-  has_many :developers, through: :games
+  has_secure_password
+
+  has_many :transactions
+  has_many :games, through: :transactions
 
 end
