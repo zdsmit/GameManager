@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 2020_03_02_164812) do
     t.string "name"
     t.string "password_digest"
     t.float "money"
+    t.boolean "developer", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
