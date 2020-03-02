@@ -13,6 +13,6 @@
     -Allow editing of a user
     -Create signin method for existing users - DONE
     -Allow logout for existing users - DONE
-    -Add optional "developer" column to "user"      database table
+    -Add optional "developer" column to "user"      database table - DONE
   Update:
     -Completely overhauled database structure, changed to a "user <==> transaction <==> game ==> genre" structure

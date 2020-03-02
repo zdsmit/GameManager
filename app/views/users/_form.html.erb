@@ -1,0 +1,15 @@
+<%= form_for @user do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %><br>
+  
+  <%= f.label :password %>
+  <%= f.password_field :password %><br>
+  
+  <%= f.label :money %>
+  <%= f.number_field :money %><br>
+  
+  <%= f.label :developer %>
+  <%= f.check_box :developer %><br><br>
+  
+  <%= f.submit "Submit" %>
+<% end %>
