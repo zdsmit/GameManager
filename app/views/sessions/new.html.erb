@@ -1,12 +1,20 @@
 <h1>Welcome to the login page! Please enter your information below!</h1>
 
-<%= form_for @user do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+<%= form_tag('/signin', method: :post) do %>
 
-  <%= f.label :password %>
-  <%= f.password_field :password %>
+  <div class="form-group">
+    <%= label_tag(:name, "Your name:") %>
 
-  <%= f.submit "Sign In" %>
-  
+    <%= collection_select(:user, :name, User.all, :name, :name, prompt: "Please select your username from this dropdown") %>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag(:password, "Your password:") %>
+    <%= password_field_tag(:password, nil, class: "form-control") %>
+  </div>
+
+  <div class="actions">
+    <%= submit_tag("Sign In") %>
+  </div>
+
 <% end %>
