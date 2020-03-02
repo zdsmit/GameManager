@@ -6,6 +6,11 @@ class GamesController < ApplicationController
 
   def create
     @game = Game.create(game_params)
+    redirect_to @game
+  end
+
+  def show
+    @game = Game.find_by(id: params[:id])
   end
 
   private
