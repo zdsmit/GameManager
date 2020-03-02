@@ -1,0 +1,12 @@
+<h1>Welcome to the login page! Please enter your information below!</h1>
+
+<%= form_for @user do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+
+  <%= f.submit "Sign In" %>
+  
+<% end %>
