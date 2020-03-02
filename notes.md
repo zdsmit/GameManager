@@ -10,9 +10,13 @@
     -Create user index page -DONE
     -Implement current_user method
     -Create user show page - DONE
-    -Allow editing of a user
+    -Allow editing of a user - DONE
     -Create signin method for existing users - DONE
     -Allow logout for existing users - DONE
     -Add optional "developer" column to "user"      database table - DONE
+    -Add link from user names on index page to their respective show pages - DONE
+    -add form to create a new game
   Update:
     -Completely overhauled database structure, changed to a "user <==> transaction <==> game ==> genre" structure
+  Future Notes:
+    -User ==> Transaction might be a good opportunity to implement nested routes

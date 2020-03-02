@@ -1,7 +1,7 @@
 <h1>Take a look at our awesome users!</h1>
 
 <% @users.each do |user| %>
-  <b><%= user.name %></b>
+  <b><%= link_to user.name, user_path(user) %></b>
   <ul>
   </ul>
 <% end %>
