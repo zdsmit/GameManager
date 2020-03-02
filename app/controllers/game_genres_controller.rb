@@ -1,2 +1,0 @@
-class GameGenresController < ApplicationController
-end

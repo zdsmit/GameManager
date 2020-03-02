@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'welcome#homepage'
   resources :game_genres
   resources :user_games
   resources :developers
