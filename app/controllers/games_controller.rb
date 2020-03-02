@@ -9,6 +9,10 @@ class GamesController < ApplicationController
     redirect_to @game
   end
 
+  def index
+    @games = Game.all
+  end
+
   def show
     @game = Game.find_by(id: params[:id])
   end
