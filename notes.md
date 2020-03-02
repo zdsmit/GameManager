@@ -7,9 +7,11 @@
 
 3/2
   Goals:
-    -Create user index page
+    -Create user index page -DONE
     -Implement current_user method
     -Create user show page - DONE
     -Allow editing of a user
     -Create signin method for existing users
     -Allow logout for existing users
+  Update:
+    -Completely overhauled database structure, changed to a "user <==> transaction <==> game ==> genre" structure
