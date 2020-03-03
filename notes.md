@@ -25,4 +25,7 @@
     -Might be best to implement creation of new genre into new game form
 
 3/3
-  
+  Goals:
+    -Get new game to save to the database
+    -Create database association between game and genre - DONE
+    
