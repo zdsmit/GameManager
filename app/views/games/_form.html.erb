@@ -8,5 +8,9 @@
   <%= f.label :price %>
   <%= f.number_field :price %><br><br>
 
+  <%= f.label :genre %>
+  <%= collection_select(:genre, :name, Genre.all, :name, :name, prompt: "Please select your genre from this dropdown") %><br>
+  <p>Or <%= link_to "create a new genre here!", new_genre_path %></p><br>
+
   <%= f.submit "Submit" %>
 <% end %>

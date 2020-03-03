@@ -23,3 +23,6 @@
     -Due to model relationship, cannot create new game without genre
     -Need to create genre before I can create a new game
     -Might be best to implement creation of new genre into new game form
+
+3/3
+  
