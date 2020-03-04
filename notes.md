@@ -29,3 +29,8 @@
     -Get new game to save to the database
     -Create database association between game and genre - DONE
     
+3/4
+  Goals
+    -Get new game to save to the database - DONE
+  Notes:
+    -Game can save to the database from the console, but something is going wrong with the webpage
