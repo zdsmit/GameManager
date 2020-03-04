@@ -1,5 +1,5 @@
 <h1>Take a look at all our amazing games!</h1>
 
 <% @games.each do |game| %>
-  Title: <%= game.title %><br><br>
+  <%=link_to "#{game.title}", game_path(game) %><br><br>
 <% end %>

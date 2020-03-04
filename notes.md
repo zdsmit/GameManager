@@ -32,5 +32,6 @@
 3/4
   Goals
     -Get new game to save to the database - DONE
+    -Add link from game titles on index page to their respective show pages - DONE
   Notes:
-    -Game can save to the database from the console, but something is going wrong with the webpage
+    -Game can save to the database from the console, but something is going wrong with the webpage - FIXED
