@@ -1,0 +1,4 @@
+<h1>Hello and welcome, <%= @developer.name %>!</h1>
+
+<%= button_to "Logout", {action: "destroy", controller: "sessions", id: session[:developer_id] },
+method: :delete %>

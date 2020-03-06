@@ -29,7 +29,7 @@ class DevelopersController < ApplicationController
     
   private
     
-  def user_params
+  def developer_params
     params.require(:developer).permit(:name, :password, :money)
   end
 end

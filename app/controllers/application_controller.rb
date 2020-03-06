@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
   private
 
   def require_logged_in
-    redirect_to root_path unless logged_in?
+    redirect_to root_path unless user_logged_in? || developer_logged_in?
   end
   
   def current_user
@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
   end
 
   def current_developer
-    @current_developer ||= Developer.find(session[:developer_id]) if sesion[:developer_id]
+    @current_developer ||= Developer.find(session[:developer_id]) if session[:developer_id]
   end
   helper_method :current_user 
   helper_method :current_developer 
