@@ -10,13 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_02_164812) do
+ActiveRecord::Schema.define(version: 2020_03_06_001509) do
+
+  create_table "developers", force: :cascade do |t|
+    t.string "name"
+    t.string "password_digest"
+    t.float "money"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "games", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.float "price"
     t.integer "genre_id"
+    t.integer "developer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -39,7 +48,6 @@ ActiveRecord::Schema.define(version: 2020_03_02_164812) do
     t.string "name"
     t.string "password_digest"
     t.float "money"
-    t.boolean "developer", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
