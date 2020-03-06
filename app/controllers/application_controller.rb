@@ -3,8 +3,12 @@ class ApplicationController < ActionController::Base
   before_action :current_user
   before_action :require_logged_in, except: [:new, :create, :homepage]
 
-  def logged_in?
+  def user_logged_in?
     !!current_user
+  end
+
+  def developer_logged_in?
+    !!current_developer
   end
 
   private
