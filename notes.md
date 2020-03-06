@@ -36,3 +36,10 @@
     -Redirect to homepage if not logged in - DONE
   Notes:
     -Game can save to the database from the console, but something is going wrong with the webpage - FIXED
+
+3/5
+  Goals
+    -Revamp database to create a Develoer object - DONE
+    -Allow the creation and show page viewing of a new Developer - DONE
+  Notes:
+    -'signin' route currently leads to signin exclusively for users. Will need to differentiate signin pages for users and developers, change route names accordingly
