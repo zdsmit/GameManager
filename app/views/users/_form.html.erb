@@ -7,6 +7,9 @@
   
   <%= f.label :money %>
   <%= f.number_field :money %><br>
+
+  <%= f.label :developer, "Are you a game developer?" %>
+  <%= f.check_box :developer %>
   
   <%= f.submit "Submit" %>
 <% end %>

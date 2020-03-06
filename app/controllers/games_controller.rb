@@ -1,7 +1,11 @@
 class GamesController < ApplicationController
 
   def new
-    @game = Game.new
+    if current_user.developer
+      @game = Game.new
+    else 
+      redirect_to user_path(current_user)
+    end
   end
 
   def create
