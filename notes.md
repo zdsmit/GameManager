@@ -43,3 +43,8 @@
     -Allow the creation and show page viewing of a new Developer - DONE
   Notes:
     -'signin' route currently leads to signin exclusively for users. Will need to differentiate signin pages for users and developers, change route names accordingly
+
+3/6
+  Goals:
+    -Allow a game to save the identity of its developer upon creation - DONE
+    
