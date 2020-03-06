@@ -11,6 +11,7 @@ class GamesController < ApplicationController
   def create
     @game = Game.create(game_params)
     if @game.save
+      @game.developer = current_user
       redirect_to game_path(@game.id)
     else
       render 'new'
