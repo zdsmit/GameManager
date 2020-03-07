@@ -51,3 +51,4 @@
     -Figure out how to include logout path on navigation bar - DONE
     -Implement ability to edit a game - DONE
     -Prevent user from editing a game unless they are its developer - DONE
+    -Add link from a game's show page to its edit page - DONE

@@ -5,3 +5,7 @@
 <p>Brought to you by <%= @game.developer.name %></p>
 
 <p>Now available for $<%= @game.price %></p>
+
+<% if @game.developer == current_user %>
+  <%= link_to "Edit Game", edit_game_path %>
+<% end %>
