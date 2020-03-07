@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'welcome#homepage'
   get '/signin', to: 'sessions#new', :as => 'signin'
   post '/signin', to: 'sessions#create'
-  delete '/users/:id', to: 'sessions#destroy', :as => 'logout'
+  get 'logout', to: 'sessions#destroy', :as => 'logout'
   resources :transactions
   resources :genres
   resources :games
