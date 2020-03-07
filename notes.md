@@ -49,3 +49,5 @@
     -Allow a game to save the identity of its developer upon creation - DONE
     -Create a navigation bar for the bottom of the page - DONE
     -Figure out how to include logout path on navigation bar - DONE
+    -Implement ability to edit a game - DONE
+    -Prevent user from editing a game unless they are its developer - DONE

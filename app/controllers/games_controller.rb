@@ -26,6 +26,21 @@ class GamesController < ApplicationController
     @game = Game.find_by(id: params[:id])
   end
 
+  def edit
+    @game = Game.find_by(id: params[:id])
+    if @game.developer == current_user
+      render 'edit'
+    else
+      redirect_to @game
+    end
+  end
+
+  def update
+    @game = Game.find_by(id: params[:id])
+    @game.update(game_params)
+    redirect_to @game
+  end
+
   private
 
   def game_params
