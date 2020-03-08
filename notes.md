@@ -52,3 +52,7 @@
     -Implement ability to edit a game - DONE
     -Prevent user from editing a game unless they are its developer - DONE
     -Add link from a game's show page to its edit page - DONE
+
+3/7
+  Goals:
+    -Prevent user from signing in unless their password matches - DONE
