@@ -8,6 +8,6 @@
 
 <% if @game.developer == current_user %>
   <%= link_to "Edit Game", edit_game_path %>
-<% elsif current_user != developer %>
+<% elsif current_user.developer == false %>
   <%= link_to "Buy This Game", new_transaction_path %>
 <% end %>

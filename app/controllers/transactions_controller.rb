@@ -1,7 +1,13 @@
 class TransactionsController < ApplicationController
 
   def new
-    @transaction = Transaction.new
+    @transaction = Transaction.new(user_id: current_user.id)
+  end
+
+  def create
+    @transaction = Transaction.create
+    purchase = @transaction.purchase
+    redirect_to user_path(@transaction.user), flash: {message:purchase}
   end
 
   private
