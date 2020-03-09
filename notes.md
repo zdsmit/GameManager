@@ -62,3 +62,13 @@
     -Add method to Transaction model to add a game to a user's games - DONE
     -Purchase method shouldn't work if user doesn't have enough money - DONE
     -Purchasing a game subtracts the price from a user's money and adds it to the developer's money - DONE
+    -Each game on the index page shows the game's developer and links to their show page - DONE
+    -Signup/login should land on a welcome page, not user show page
+    -Add button on game show page to buy the game
+    -User show page for non-developers should show the games they've purchased
+
+  3/9
+    Goals:
+    -Signup/login should land on a welcome page, not user show page
+    -Add button on game show page to buy the game
+    -User show page for non-developers should show the games they've purchased
