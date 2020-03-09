@@ -56,3 +56,8 @@
 3/7
   Goals:
     -Prevent user from signing in unless their password matches - DONE
+
+3/8
+  Goals:
+    -Add method to Transaction model to add a game to a user's games - DONE
+    -When a user buys the game, the price should eb subtracted from their money
