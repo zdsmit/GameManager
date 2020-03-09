@@ -1,6 +1,8 @@
 <% if !!current_user %>
   <h1>Welcome to Game Manager, <%= current_user.name %>!</h1>
 
+  <p>You currently have $<%= current_user.money %> in your account.</p>
+
   <%= button_to "Logout", {action: "destroy", controller: "sessions", id: session[:user_id] },
 method: :delete %>
 

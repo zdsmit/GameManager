@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   resources :transactions
   resources :genres
   resources :games
-  resources :users
+  resources :users do
+    resources :games
+  end
   resources :sessions, only: [:new, :create, :destroy]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
