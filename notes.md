@@ -60,4 +60,5 @@
 3/8
   Goals:
     -Add method to Transaction model to add a game to a user's games - DONE
-    -When a user buys the game, the price should eb subtracted from their money
+    -Purchase method shouldn't work if user doesn't have enough money - DONE
+    -Purchasing a game subtracts the price from a user's money and adds it to the developer's money - DONE
