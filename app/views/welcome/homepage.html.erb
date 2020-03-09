@@ -1,5 +1,9 @@
 <% if !!current_user %>
   <h1>Welcome to Game Manager, <%= current_user.name %>!</h1>
+
+  <%= button_to "Logout", {action: "destroy", controller: "sessions", id: session[:user_id] },
+method: :delete %>
+
 <% else %>
   <h1>Welcome to Game Manager!</h1>
 
