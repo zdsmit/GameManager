@@ -5,7 +5,7 @@ class TransactionsController < ApplicationController
   end
 
   def create
-    @transaction = Transaction.create
+    @transaction = Transaction.create(transaction_params)
     purchase = @transaction.purchase
     redirect_to user_path(@transaction.user), flash: {message:purchase}
   end

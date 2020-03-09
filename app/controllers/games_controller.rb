@@ -24,7 +24,6 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.find_by(id: params[:id])
-    @transaction = @game.transactions.build(user_id: current_user.id)
   end
 
   def edit
