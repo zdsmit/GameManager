@@ -4,7 +4,7 @@ class GamesController < ApplicationController
     if current_user.developer
       @game = Game.new
     else 
-      redirect_to user_path(current_user)
+      redirect_to root_path
     end
   end
 
@@ -24,6 +24,7 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.find_by(id: params[:id])
+    @transaction = @game.transactions.build(user_id: current_user.id)
   end
 
   def edit
