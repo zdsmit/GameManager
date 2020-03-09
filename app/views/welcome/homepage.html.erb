@@ -1,1 +1,7 @@
-<h1>Welcome to Game Manager!</h1>
+<% if !!current_user %>
+  <h1>Welcome to Game Manager, <%= current_user.name %>!</h1>
+<% else %>
+  <h1>Welcome to Game Manager!</h1>
+
+  <h2>Please click below to sign in or create a new account with us!</h2>
+<% end %>

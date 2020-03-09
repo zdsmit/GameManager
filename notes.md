@@ -69,6 +69,7 @@
 
   3/9
     Goals:
-    -Signup/login should land on a welcome page, not user show page
+    -Signup/login should land on a welcome page, not user show page - DONE
+    -Homepage welcomes a user if they are logged in - DONE
     -Add button on game show page to buy the game
     -User show page for non-developers should show the games they've purchased
