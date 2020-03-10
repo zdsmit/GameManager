@@ -75,5 +75,5 @@
     -Add link on game show page to transaction page   - DONE
     -Create transaction page that allows user to      buy the game of their choice - DONE
     -Implement a nested route for a user and their    games - DONE
-    -User show page for non-developers should         include a link to their games page, where all   their games are displayed
+    -User show page for non-developers should         include a link to their games page, where all   their games are displayed - DONE
     -Display a user's remaining money on their        homepage - DONE
