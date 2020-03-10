@@ -7,7 +7,9 @@
 <p>Now available for $<%= @game.price %></p>
 
 <% if @game.developer == current_user %>
-  <%= link_to "Edit Game", edit_game_path %>
+  <%= link_to "Edit Game", edit_game_path %><br>
+  <%= link_to "Delete Game", {action: "destroy", controller: "games", id: @game.id },
+method: :delete %>
 <% elsif current_user.developer == false %>
   <%= link_to "Buy This Game", new_transaction_path %>
 <% end %>
