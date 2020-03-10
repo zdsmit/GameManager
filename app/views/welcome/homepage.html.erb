@@ -1,1 +1,16 @@
-<h1>Welcome to Game Manager!</h1>
+<% if !!current_user %>
+  <h1>Welcome to Game Manager, <%= current_user.name %>!</h1>
+
+  <p>You currently have $<%= current_user.money %> in your account.</p>
+
+  <%= button_to "Logout", {action: "destroy", controller: "sessions", id: session[:user_id] },
+method: :delete %>
+
+  <%= button_to "Delete your account", {action: "destroy", controller: "users", id: session[:user_id] },
+method: :delete %>
+
+<% else %>
+  <h1>Welcome to Game Manager!</h1>
+
+  <h2>Please click below to sign in or create a new account with us!</h2>
+<% end %>

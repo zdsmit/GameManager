@@ -1,7 +1,19 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :current_user
-  
+  before_action :require_logged_in, except: [:new, :create, :homepage]
+
+  def user_logged_in?
+    !!current_user
+  end
+
+
+
+  private
+
+  def require_logged_in
+    redirect_to root_path unless user_logged_in?
+  end
   
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]

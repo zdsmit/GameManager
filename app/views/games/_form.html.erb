@@ -1,0 +1,16 @@
+<%= form_for @game do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %><br>
+
+  <%= f.label :description %>
+  <%= f.text_area :description %><br>
+
+  <%= f.label :price %>
+  <%= f.number_field :price %><br><br>
+
+  <%= f.label :genre %>
+  <%= f.collection_select(:genre_id, Genre.all, :id, :name, prompt: "Please select your genre from this dropdown") %><br>
+  <p>Or <%= link_to "create a new genre here!", new_genre_path %></p><br>
+
+  <%= f.submit "Submit" %>
+<% end %>

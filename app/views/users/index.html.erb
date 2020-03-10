@@ -1,7 +1,15 @@
 <h1>Take a look at our awesome users!</h1>
 
+<h2>Players</h2>
 <% @users.each do |user| %>
-  <b><%= user.name %></b>
-  <ul>
-  </ul>
+  <% if user.developer == false %>
+    <b><%= link_to user.name, user_path(user) %></b><br>
+  <% end %>
+<% end %>
+
+<h2>Game Developers</h2>
+<% @users.each do |user| %>
+  <% if user.developer == true %>
+    <b><%= link_to user.name, user_path(user) %></b><br>
+  <% end %>
 <% end %>

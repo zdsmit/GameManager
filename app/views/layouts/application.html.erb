@@ -6,10 +6,22 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" type="text/css" href="<%= '/application.css' %>">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <%= yield %>
+    <footer>
+      <div class="navigation">
+        <a href="/">Home</a>
+        <a href="/games">Games</a>
+        <a href="/users">Users</a>
+        <a href="/users/new">Sign Up</a>
+        <a href="/signin">Sign In</a>
+        <a href="/logout">Logout</a>
+        <br>
+      </div>
+    </footer>
   </body>
 </html>
