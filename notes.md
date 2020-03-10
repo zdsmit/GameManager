@@ -84,6 +84,7 @@
 
 3/10
   Goals:
-    -Implement ability to delete games or users
+    -Implement ability to delete users - DONE
+    -Implement ability to delete games
     -Make sure a successful transaction subtracts     and adds funds as appropriate
   
