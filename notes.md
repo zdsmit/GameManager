@@ -86,5 +86,6 @@
   Goals:
     -Implement ability to delete users - DONE
     -Implement ability to delete games - DONE
+    -When a user buys a game, only one copy should go into their collection - DONE
     -Make sure a successful transaction subtracts     and adds funds as appropriate
   
