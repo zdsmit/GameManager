@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     resources :games
   end
   resources :sessions, only: [:new, :create, :destroy]
-  #get ‘auth/:provider/callback’, to: ‘sessions#googleAuth’
-  #get ‘auth/failure’, to: redirect(‘/’)
+  get 'auth/:provider/callback', to: 'sessions#googleAuth'
+  get 'auth/failure', to: redirect('/')
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

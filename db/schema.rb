@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_10_214539) do
+ActiveRecord::Schema.define(version: 2020_03_11_151340) do
 
   create_table "games", force: :cascade do |t|
     t.string "title"
@@ -46,6 +46,8 @@ ActiveRecord::Schema.define(version: 2020_03_10_214539) do
     t.datetime "updated_at", null: false
     t.string "google_token"
     t.string "google_refresh_token"
+    t.string "uid"
+    t.string "email"
   end
 
 end
