@@ -91,3 +91,15 @@
     -Add web app's address to authorized addresses for Google access
     -Implement omniauth login
   
+3/11
+  Goals:
+    -Implement omniauth login
+
+3/12
+  Goals:
+    -Implement scope method in User class - DONE
+    -Implement validations in Game and User classes   - DONE
+    -Implement field_with_errors
+    -Implement omniauth login
+  Notes:
+    -Need to make sure a developer's game are         deleted when the developer is deleted,          otherwise it causes an error in game index      and show pages

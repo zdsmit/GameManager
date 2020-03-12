@@ -2,6 +2,7 @@ class User < ApplicationRecord
   has_secure_password
   has_many :transactions
   has_many :games, through: :transactions
+  scope :developer, -> { where(developer: true) }
 
   def self.from_omniauth(auth)
     # Creates a new user only if it doesn't exist
