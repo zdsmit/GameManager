@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  skip_before_action :require_logged_in, only: [:new, :create]
 
   def new
     @user = User.new
@@ -39,7 +40,7 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:name, :email, :password, :money, :developer,
-      :google_token, :google_refresh_token)
+    :google_token, :google_refresh_token)
   end
 
 end
