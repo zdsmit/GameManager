@@ -6,7 +6,6 @@ class Transaction < ApplicationRecord
     leftover_money = self.user.money - self.game.price
     profit = self.game.developer.money + self.game.price
     if leftover_money > 0
-      byebug
       self.user.games << self.game unless self.user.games.include?(self.game)
       self.user.update(
         :money => leftover_money

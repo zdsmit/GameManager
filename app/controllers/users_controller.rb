@@ -40,7 +40,7 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:name, :email, :password, :money, :developer,
-    :google_token, :google_refresh_token)
+    :image)
   end
 
 end
