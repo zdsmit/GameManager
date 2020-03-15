@@ -3,7 +3,7 @@
 <h2>Interested in buying a game? You've come to the right place!</h2>
 
 <%= form_for @transaction do |f| %>
-  <%= f.hidden_field :user_id %><br>
+  <%= f.hidden_field :user_id, value: current_user.id %><br>
   <%= f.collection_select(:game_id, Game.all, :id, :title, prompt: "Which game would you like to purchase?") %><br>
   <%= f.submit "Buy This Game" %>
 <% end %>

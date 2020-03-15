@@ -10,5 +10,6 @@ Rails.application.routes.draw do
     resources :games
   end
   resources :sessions, only: [:new, :create, :destroy]
+  get '/auth/facebook/callback' => 'sessions#facebookAuth'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

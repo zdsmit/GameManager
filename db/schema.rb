@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_06_205237) do
+ActiveRecord::Schema.define(version: 2020_03_13_204759) do
 
   create_table "games", force: :cascade do |t|
     t.string "title"
@@ -39,11 +39,16 @@ ActiveRecord::Schema.define(version: 2020_03_06_205237) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
-    t.string "password_digest"
-    t.float "money"
+    t.string "password_digest", default: "password"
+    t.float "money", default: 100.0
     t.boolean "developer", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "google_token"
+    t.string "google_refresh_token"
+    t.string "uid"
+    t.string "email"
+    t.string "image"
   end
 
 end
