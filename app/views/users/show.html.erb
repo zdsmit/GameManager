@@ -1,3 +1,9 @@
+<% if flash[:message] %>
+  <div class="center alert">
+    <p><%= flash[:message] %></p>
+  </div>
+<% end %>
+
 <h1><%= @user.name %></h1>
 
 <%= link_to "See this user's game collection", user_games_path(@user.id) %>
