@@ -4,16 +4,22 @@ class Transaction < ApplicationRecord
 
   def purchase
     leftover_money = self.user.money - self.game.price
-    profit = self.game.developer.money + self.game.price
     if leftover_money > 0
       self.user.games << self.game unless self.user.games.include?(self.game)
       self.user.update(
         :money => leftover_money
         )
-      self.game.developer.update(
-        :money => profit
+      if !!self.game.developer
+        profit = self.game.developer.money + self.game.price  
+        self.game.developer.update(
+          :money => profit
         )
-      "Thank you very much for your purchase. Enjoy the game!"
+      end
+      if self.message == ""
+        "Thank you very much for your purchase. Enjoy the game!"
+      else
+        self.message
+      end
     else
       "Sorry, you don't have enough money!"
     end
