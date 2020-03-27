@@ -17,6 +17,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    @developers = User.developers
   end
 
   def show
