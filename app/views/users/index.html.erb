@@ -8,8 +8,6 @@
 <% end %>
 
 <h2>Game Developers</h2>
-<% @users.each do |user| %>
-  <% if user.developer == true %>
-    <b><%= link_to user.name, user_path(user) %></b><br>
-  <% end %>
+<% @developers.each do |dev| %>
+  <b><%= link_to dev.name, user_path(dev) %></b><br>
 <% end %>

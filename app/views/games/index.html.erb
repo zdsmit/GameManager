@@ -5,8 +5,10 @@
 <% end %>  
 
 <% @games.each do |game| %>
-  <%=link_to "#{game.title}", game_path(game) %><br>
-  <p>Developer: <%= link_to game.developer.name, user_path(game.developer) %></p><br><br>
+    <%=link_to "#{game.title}", game_path(game) %><br>    
+    <% if game.developer != nil %>
+      <p>Developer: <%= link_to game.developer.name, user_path(game.developer) %></p><br><br>
+    <% end %>
 <% end %>
 
 <% if current_user.developer == true %>

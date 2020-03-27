@@ -3,12 +3,6 @@
 <%= form_tag('/signin', method: :post) do %>
 
   <div class="form-group">
-    <%= label_tag(:name, "Your name:") %>
-
-    <%= collection_select(:user, :name, User.all, :name, :name, prompt: "Please select your username from this dropdown") %>
-  </div>
-
-  <div class="form-group">
     <%= label_tag(:email, "Your email:") %>
     <%= text_field_tag(:email, nil, class: "form-control") %>
   </div>

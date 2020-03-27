@@ -2,7 +2,9 @@
 
 <p><%= @game.description %></p>
 
-<p>Brought to you by <%= @game.developer.name %></p>
+<% if @game.developer != nil %>
+  <p>Brought to you by <%= @game.developer.name %></p>
+<% end %>
 
 <p>Now available for $<%= @game.price %></p>
 
