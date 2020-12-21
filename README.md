@@ -1,5 +1,7 @@
 # README
 
+To use, first use 'bundle install' to set up all dependencies. Then type 'rails s' in the console to fire up the server. Finally navigate to 'http://localhost:3000/games'.
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
